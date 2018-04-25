@@ -1,0 +1,8 @@
+library(ahp)
+ipad <- system.file("extdata", "dane.ahp", package="ahp")
+smartfonAhp <- Load(ipad)
+Calculate(smartfonAhp)
+print(smartfonAhp, priority = function(x) x$sparent$priority["total", x$name])
+Visualize(smartfonAhp)
+Analyze(smartfonAhp)
+AnalyzeTable(smartfonAhp)
